@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581283529719.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2000017979",
+    "id" : "5C62A414",
+    "lastKnownWriteTime" : 1581289917,
+    "last_content_update" : 1581289918008,
+    "path" : "~/RProject/Personal_Projects/DT_Iris/DT_Iris.Rmd",
+    "project_path" : "DT_Iris.Rmd",
+    "properties" : {
+        "cursorPosition" : "136,0",
+        "scrollLine" : "132",
+        "tempName" : "Untitled2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

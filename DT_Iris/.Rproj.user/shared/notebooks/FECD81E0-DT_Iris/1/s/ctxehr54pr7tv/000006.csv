@@ -1,0 +1,2 @@
+"0","tb = data.frame(pred, iris$Species)"
+"0","View(tb)"

@@ -1,0 +1,2 @@
+"0","control = rpart.control(cp = 0.0, minsplit=0)"
+"0","dt <- rpart(Species~., data = iris, control = control)"

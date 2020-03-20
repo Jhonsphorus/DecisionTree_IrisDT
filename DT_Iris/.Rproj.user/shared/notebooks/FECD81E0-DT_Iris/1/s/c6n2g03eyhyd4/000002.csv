@@ -1,0 +1,2 @@
+"0","train <- training(splitted_iris)"
+"0","test <- testing(splitted_iris)"

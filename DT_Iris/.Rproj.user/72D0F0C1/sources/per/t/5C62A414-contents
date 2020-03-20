@@ -1,0 +1,144 @@
+---
+title: "DT_Iris"
+author: "Johnson Adebayo_SCV1007 (Cohort 1)"
+date: "2/9/2020"
+output: html_document
+---
+```{r}
+datasets::iris
+# You can use this as well to access iris dataset
+#data("iris")
+```
+
+```{r}
+View(iris)
+```
+
+```{r}
+#boxplot(iris$Species,iris$Petal.Length)
+```
+
+```{r}
+#hist(log(iris$Sepal.Length))
+```
+
+
+```{r}
+summary(iris)
+```
+
+
+# Loading the require packages
+```{r}
+library(rpart)
+library(rpart.plot)
+```
+
+# Fitting decision tree model on the iris dataset
+```{r}
+dt <- rpart(Species~., data = iris)
+```
+
+# Overtraining the decision tree model
+```{r}
+#control = rpart.control(cp = 0.0, minsplit=0)
+#dt <- rpart(Species~., data = iris, control = control)
+```
+
+# Plotting the decision tree
+```{r}
+plot(dt)
+text(dt)
+```
+
+```{r}
+rpart.plot(dt)
+```
+
+```{r}
+rpart.plot(dt, extra = 1)
+```
+
+```{r}
+rpart.plot(dt, extra = 2)
+```
+
+```{r}
+pred_1 <- predict(dt,iris)
+pred_1
+```
+
+# Using conditional inference trees
+```{r}
+library(party)
+
+```
+
+```{r}
+model1 = ctree(Species~., data = iris)
+```
+
+```{r}
+plot(model1, type="simple")
+```
+
+```{r}
+pred = predict(model1)
+mat1 = table(pred, iris$Species)
+mat1
+```
+
+
+```{r}
+tb = data.frame(pred, iris$Species)
+View(tb)
+```
+
+
+```{r}
+accuracy = sum(diag(mat1))/sum(mat1)
+accuracy
+```
+
+
+```{r}
+error1 = 1 -accuracy
+error1
+```
+
+
+```{r}
+library(rsample)
+```
+
+```{r}
+set.seed(100)
+splitted_iris <- initial_split(iris, prop = 0.5)
+splitted_iris
+```
+
+```{r}
+train <- training(splitted_iris)
+test <- testing(splitted_iris)
+```
+
+```{r}
+tree3 <- ctree(Species~.,train )
+
+```
+
+```{r}
+#pred_1 = predict(tree3,test)
+tab_iris = table(predict(tree3, test), test$Species)
+tab_iris
+```
+
+```{r}
+
+```
+
+
+
+
+
+
